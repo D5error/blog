@@ -1,12 +1,12 @@
 package com.d5error.api;
 
-import com.d5error.entity.DateEntity;
 import com.d5error.entity.RunningDataEntity;
 import com.d5error.mapper.RunningMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,6 +20,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/Running")
 public class Running {
+    @CrossOrigin
     @GetMapping("/data")
     public List<RunningDataEntity> data() throws IOException {
 //        DateEntity date = new DateEntity(2004, 02, 06);
